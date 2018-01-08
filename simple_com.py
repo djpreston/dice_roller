@@ -1,4 +1,4 @@
-import serial #sudo pip install serial
+import serial
 import time
 
 class arduinoCommunicator():
@@ -14,11 +14,11 @@ class arduinoCommunicator():
         return  text
 
     def blink(self):
-        for i in range(100):
+        for i in range(5):
             self.ser.writelines("255\n")
-            time.sleep(.1)
+            time.sleep(.5)
             self.ser.writelines("0\n")
-            time.sleep(.1)
+            time.sleep(.5)
 
 
 if __name__=="__main__":
@@ -26,7 +26,7 @@ if __name__=="__main__":
 #    d.blink()
     print "starting detector"
     while True:
-        q = raw_input("write a number bitch")
+        q = raw_input("write a number")
         if q == "quit":
             break
         else:

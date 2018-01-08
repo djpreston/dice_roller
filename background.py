@@ -6,7 +6,7 @@ def take_background():
     ret_val, img = cam.read()
     cv2.imshow('my webcam', img)
 #    time.sleep(5)
-    cv2.waitKey(1)
+    cv2.waitKey(0)
     cv2.imwrite("background.png", img)
 
 def main():
